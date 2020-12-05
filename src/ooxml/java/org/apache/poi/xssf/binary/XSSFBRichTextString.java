@@ -40,25 +40,25 @@ class XSSFBRichTextString extends XSSFRichTextString {
     @Override
     @NotImplemented
     public void applyFont(int startIndex, int endIndex, short fontIndex) {
-
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     @Override
     @NotImplemented
     public void applyFont(int startIndex, int endIndex, Font font) {
-
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     @Override
     @NotImplemented
     public void applyFont(Font font) {
-
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     @Override
     @NotImplemented
     public void clearFormatting() {
-
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     @Override
@@ -74,18 +74,18 @@ class XSSFBRichTextString extends XSSFRichTextString {
     @Override
     @NotImplemented
     public int numFormattingRuns() {
-        return 0;
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     @Override
     @NotImplemented
     public int getIndexOfFormattingRun(int index) {
-        return 0;
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     @Override
     @NotImplemented
     public void applyFont(short fontIndex) {
-
+        throw new UnsupportedOperationException("Not implemented");
     }
 }

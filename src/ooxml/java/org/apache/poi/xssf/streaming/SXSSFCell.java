@@ -676,7 +676,7 @@ public class SXSSFCell extends CellBase {
     @NotImplemented
     public CellRangeAddress getArrayFormulaRange()
     {
-        return null;
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     /**
@@ -686,7 +686,7 @@ public class SXSSFCell extends CellBase {
     @NotImplemented
     public boolean isPartOfArrayFormulaGroup()
     {
-        return false;
+        throw new UnsupportedOperationException("Not implemented");
     }
 //end of interface implementation
 

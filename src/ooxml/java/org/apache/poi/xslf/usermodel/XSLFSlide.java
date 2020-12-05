@@ -352,7 +352,7 @@ implements Slide<XSLFShape,XSLFTextParagraph> {
     @NotImplemented
     public void setNotes(Notes<XSLFShape,XSLFTextParagraph> notes) {
         assert(notes instanceof XSLFNotes);
-        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     @Override

@@ -383,7 +383,7 @@ public class SLGraphics extends Graphics2D implements Cloneable {
      */
     @NotImplemented
     public void clip(Shape s){
-        logNotImplemented();
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     /**
@@ -404,8 +404,7 @@ public class SLGraphics extends Graphics2D implements Cloneable {
      */
     @NotImplemented
     public Shape getClip(){
-        logNotImplemented();
-        return null;
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     /**
@@ -671,8 +670,7 @@ public class SLGraphics extends Graphics2D implements Cloneable {
     public boolean drawImage(Image img, int x, int y,
                              Color bgcolor,
                              ImageObserver observer){
-        logNotImplemented();
-        return false;
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     /**
@@ -718,8 +716,7 @@ public class SLGraphics extends Graphics2D implements Cloneable {
                              int width, int height,
                              Color bgcolor,
                              ImageObserver observer){
-        logNotImplemented();
-        return false;
+        throw new UnsupportedOperationException("Not implemented");
     }
 
 
@@ -775,8 +772,7 @@ public class SLGraphics extends Graphics2D implements Cloneable {
                              int dx1, int dy1, int dx2, int dy2,
                              int sx1, int sy1, int sx2, int sy2,
                              ImageObserver observer){
-        logNotImplemented();
-        return false;
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     /**
@@ -838,8 +834,7 @@ public class SLGraphics extends Graphics2D implements Cloneable {
                              int sx1, int sy1, int sx2, int sy2,
                              Color bgcolor,
                              ImageObserver observer){
-        logNotImplemented();
-        return false;
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     /**
@@ -877,8 +872,7 @@ public class SLGraphics extends Graphics2D implements Cloneable {
     @NotImplemented
     public boolean drawImage(Image img, int x, int y,
                              ImageObserver observer) {
-        logNotImplemented();
-        return false;
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     /**
@@ -1062,7 +1056,7 @@ public class SLGraphics extends Graphics2D implements Cloneable {
      */
     @NotImplemented
     public void setClip(Shape clip) {
-        logNotImplemented();
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     /**
@@ -1083,8 +1077,7 @@ public class SLGraphics extends Graphics2D implements Cloneable {
      * @since       JDK1.1
      */
     public Rectangle getClipBounds(){
-        logNotImplemented();
-        return null;
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     /**
@@ -1357,7 +1350,7 @@ public class SLGraphics extends Graphics2D implements Cloneable {
      */
     @NotImplemented
     public void setComposite(Composite comp){
-        logNotImplemented();
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     /**
@@ -1369,8 +1362,7 @@ public class SLGraphics extends Graphics2D implements Cloneable {
      */
     @NotImplemented
     public Composite getComposite(){
-        logNotImplemented();
-        return null;
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     /**
@@ -1511,7 +1503,7 @@ public class SLGraphics extends Graphics2D implements Cloneable {
      */
     @NotImplemented
     public void drawString(AttributedCharacterIterator iterator, float x, float y) {
-        logNotImplemented();
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     /**
@@ -1616,8 +1608,7 @@ public class SLGraphics extends Graphics2D implements Cloneable {
      */
     @NotImplemented
     public boolean drawImage(Image img, AffineTransform xform, ImageObserver obs) {
-        logNotImplemented();
-        return false;
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     /**
@@ -1660,8 +1651,7 @@ public class SLGraphics extends Graphics2D implements Cloneable {
     public boolean drawImage(Image img, int x, int y,
                              int width, int height,
                              ImageObserver observer) {
-        logNotImplemented();
-        return false;
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     /**
@@ -1709,7 +1699,7 @@ public class SLGraphics extends Graphics2D implements Cloneable {
      */
     @NotImplemented
     public void setXORMode(Color c1) {
-        logNotImplemented();
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     /**
@@ -1721,7 +1711,7 @@ public class SLGraphics extends Graphics2D implements Cloneable {
      */
     @NotImplemented
     public void setPaintMode() {
-        logNotImplemented();
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     /**
@@ -1757,7 +1747,7 @@ public class SLGraphics extends Graphics2D implements Cloneable {
      */
     @NotImplemented
     public void drawRenderedImage(RenderedImage img, AffineTransform xform) {
-        logNotImplemented();
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     /**
@@ -1783,7 +1773,7 @@ public class SLGraphics extends Graphics2D implements Cloneable {
      */
     @NotImplemented
     public void drawRenderableImage(RenderableImage img, AffineTransform xform) {
-        logNotImplemented();
+        throw new UnsupportedOperationException("Not implemented");
     }
 
     protected void applyStroke(SimpleShape<?,?> shape) {
@@ -1801,12 +1791,6 @@ public class SLGraphics extends Graphics2D implements Cloneable {
     protected void applyPaint(SimpleShape<?,?> shape) {
         if (_paint instanceof Color) {
             shape.setFillColor((Color)_paint);
-        }
-    }
-
-    private void logNotImplemented() {
-        if (LOG.check(POILogger.WARN)) {
-            LOG.log(POILogger.WARN, "Not implemented");
         }
     }
 }
