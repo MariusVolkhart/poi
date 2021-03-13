@@ -103,6 +103,7 @@ subprojects {
         mockitoVersion = '3.6.0'
         hamcrestVersion = '2.2'
         xmlbeansVersion = '5.0.0'
+        batikVersion = '1.14'
     }
 
     tasks.withType(JavaCompile) {
@@ -167,7 +168,7 @@ subprojects {
         // this is necessary for JDK 9+ to keep formatting dates the same way as in previous JDK-versions
         systemProperties['java.locale.providers'] = 'JRE,CLDR'
 
-        systemProperties['junit.jupiter.execution.parallel.enabled'] = 'true'
+        systemProperties['junit.jupiter.execution.parallel.enabled'] = 'false'
     }
 
     jacoco {
@@ -308,7 +309,9 @@ project('ooxml') {
         compile "org.apache.logging.log4j:log4j-api:${log4jVersion}"
 
         // compile only, don't add it to our dist as it blows up the size
-        compile 'org.apache.xmlgraphics:batik-all:1.14'
+        compile "org.apache.xmlgraphics:batik-svggen:${batikVersion}"
+        compile "org.apache.xmlgraphics:batik-bridge:${batikVersion}"
+        compile "org.apache.xmlgraphics:batik-codec:${batikVersion}"
         compile 'xml-apis:xml-apis-ext:1.3.04'
         compile 'org.apache.xmlgraphics:xmlgraphics-commons:2.4'
 
